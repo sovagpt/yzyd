@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YZY MONEY</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #FFFFFF;
+            color: #000000;
+            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            line-height: 1.2;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        header {
+            padding: 60px 0;
+            border-bottom: 1px solid #000000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 120px);
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 0.9;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contract-section {
+            background: #000000;
+            color: #FFFFFF;
+            padding: 40px 0;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .contract-address {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .address-code {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            word-break: break-all;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            margin: 20px 0;
+        }
+
+        .trade-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .trade-btn {
+            background: #FFFFFF;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .trade-btn:hover {
+            background: #000000;
+            color: #FFFFFF;
+        }
+
+        .products-section {
+            padding: 100px 0;
+            border-top: 1px solid #000000;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .product-card {
+            text-align: center;
+            padding: 40px 20px;
+            border: 1px solid #000000;
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .tokenomics {
+            padding: 100px 0;
+            border-top: 1px solid #000000;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .tokenomics-grid {
+            display: grid;
+            grid-template-co
