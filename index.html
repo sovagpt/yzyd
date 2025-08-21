@@ -329,9 +329,20 @@
 
     <script>
         // Simple click effects
-        document.querySelectorAll('.action-btn, .trade-link').forEach(element => {
+        document.querySelectorAll('.action-btn').forEach(element => {
             element.addEventListener('click', function(e) {
                 e.preventDefault();
+                this.style.opacity = '0.3';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                }, 150);
+            });
+        });
+
+        // Handle trade links without preventing default
+        document.querySelectorAll('.trade-link').forEach(element => {
+            element.addEventListener('click', function() {
+                // Only add visual effect, don't prevent default navigation
                 this.style.opacity = '0.3';
                 setTimeout(() => {
                     this.style.opacity = '1';
