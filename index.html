@@ -30,22 +30,18 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: #999999;
             margin: 0 auto 60px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            overflow: hidden;
         }
 
-        .logo::before {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-bottom: 20px solid #FFFFFF;
-            transform: rotate(180deg);
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .action-buttons {
@@ -216,142 +212,120 @@
 <body>
     <div class="container">
         <!-- Logo -->
-        <div class="logo"></div>
+        <div class="logo">
+            <img src="https://cdn.prod.website-files.com/6740d85c4e3daeef29a89470/68a6844b96721e1c32947cfe_masked-final-logo.webp" alt="YZY Logo">
+        </div>
 
         <!-- Action Buttons -->
         <div class="action-buttons">
-            <button class="action-btn">BUY</button>
-            <button class="action-btn">SELL</button>
-            <button class="action-btn">SEND</button>
+            <button class="action-btn">INVEST</button>
+            <button class="action-btn">PORTFOLIO</button>
+            <button class="action-btn">CONNECT</button>
         </div>
 
         <!-- Main Description -->
         <div class="section">
             <div class="section-text">
-                YZY MONEY IS A CONCEPT TO PUT YOU IN<br>
-                CONTROL, FREE FROM CENTRALIZED<br>
-                AUTHORITY
+                YEEZY.INVESTMENTS IS A VENTURE CAPITAL<br>
+                FUND FOCUSED ON ACQUIRING STRATEGIC<br>
+                BLOCKCHAIN ASSETS
             </div>
         </div>
 
-        <!-- Currency Info -->
+        <!-- Fund Info -->
         <div class="currency-info">
             <div class="section-text">
-                YZY &nbsp;&nbsp; YE PAY &nbsp;&nbsp; YZY CARD
+                DEFI &nbsp;&nbsp; NFTS &nbsp;&nbsp; INFRASTRUCTURE
             </div>
             <div class="section-text">
-                YZY IS THE CURRENCY THAT POWERS ALL<br>
-                TRANSACTIONS WITHIN YZY MONEY
+                WE IDENTIFY AND ACQUIRE DIGITAL ASSETS<br>
+                THAT WILL DEFINE THE FUTURE OF CULTURE
             </div>
         </div>
 
-        <!-- Contract Address -->
+        <!-- Fund Details -->
         <div class="contract-section">
-            <div class="contract-label">CONTRACT ADDRESS</div>
+            <div class="contract-label">FUND SIZE</div>
             <div class="contract-address">
-                DrZ26cKJDksVRWib3DVVsjo9eeXccc7hKhDJviiYEEZY
+                $500M USD ACROSS BLOCKCHAIN OPPORTUNITIES
             </div>
         </div>
 
-        <!-- Trade Links -->
+        <!-- Investment Links -->
         <div class="trade-section">
-            <a href="#" class="trade-link">TRADE YZY NOW</a>
-            <a href="#" class="trade-link">TRADE ON MOBILE</a>
+            <a href="#" class="trade-link">VIEW PORTFOLIO</a>
+            <a href="#" class="trade-link">INVESTMENT THESIS</a>
         </div>
 
-        <!-- Tokenomics -->
+        <!-- Portfolio Allocation -->
         <div class="tokenomics-section">
-            <div class="tokenomics-title">YZYNOMICS</div>
+            <div class="tokenomics-title">PORTFOLIO ALLOCATION</div>
             
             <div class="token-item">
-                <span>PUBLIC</span>
-                <span>20%</span>
-            </div>
-            <div class="token-detail">SUPPLY</div>
-            
-            <div class="token-item">
-                <span>LIQUIDITY</span>
-                <span>10%</span>
-            </div>
-            <div class="token-detail">PUBLIC</div>
-            
-            <div class="token-item">
-                <span>YEEZY INVESTMENTS LLC</span>
+                <span>LAYER 1 PROTOCOLS</span>
                 <span>30%</span>
             </div>
-            <div class="token-detail">3 MO. CLIFF, 24 MO. VEST</div>
+            <div class="token-detail">ETH, SOL, AVAX</div>
             
             <div class="token-item">
-                <span>TEAM</span>
-                <span>20%</span>
+                <span>DEFI INFRASTRUCTURE</span>
+                <span>25%</span>
             </div>
-            <div class="token-detail">6 MO. CLIFF, 24 MO. VEST</div>
+            <div class="token-detail">UNISWAP, AAVE, COMPOUND</div>
             
             <div class="token-item">
-                <span>DEVELOPMENT</span>
+                <span>CULTURAL ASSETS</span>
                 <span>20%</span>
             </div>
-            <div class="token-detail">12 MO. CLIFF, 24 MO. VEST</div>
+            <div class="token-detail">BLUE CHIP NFTS, CREATOR TOKENS</div>
+            
+            <div class="token-item">
+                <span>GAMING & METAVERSE</span>
+                <span>15%</span>
+            </div>
+            <div class="token-detail">VIRTUAL WORLDS, GAMING TOKENS</div>
+            
+            <div class="token-item">
+                <span>EMERGING TECH</span>
+                <span>10%</span>
+            </div>
+            <div class="token-detail">AI, PRIVACY, INFRASTRUCTURE</div>
         </div>
 
-        <!-- FAQ -->
+        <!-- Mint Section -->
         <div class="faq-section">
-            <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
-            
-            <div class="faq-item">WHAT IS YZY MONEY</div>
-            <div class="faq-item">WHAT IS YE PAY</div>
-            <div class="faq-item">WHAT IS YZY CARD</div>
-            <div class="faq-item">WHAT IS THE CONTRACT ADDRESS AND<br>SYMBOL FOR YZY</div>
-            <div class="faq-item">HOW CAN I TRADE YZY</div>
-            <div class="faq-item">HOW TO TRADE YZY ON MOBILE</div>
-            <div class="faq-item">HOW DO I BUY YZY WITH CARD</div>
-            <div class="faq-item">HOW DOES OUR ANTI-SNIPING SYSTEM<br>WORK</div>
-            <div class="faq-item">WHAT BLOCKCHAIN ARE YZY MINTED ON</div>
-            <div class="faq-item">HOW IS YZY VESTED</div>
-            <div class="faq-item">ARE YZY, YE PAY, AND YZY CARD<br>AFFILIATED</div>
-            <div class="faq-item">WHAT ELSE SHOULD I KNOW</div>
+            <a href="https://google.com" class="trade-link" style="font-size: 14px; text-align: center; display: block; margin: 40px 0;">MINT YZYVERSE</a>
         </div>
 
         <!-- Disclaimers -->
         <div class="disclaimer-section">
             <div class="disclaimer-item">
-                YZY are intended to function as an expression<br>
-                of support for and engagement with the ideals<br>
-                and beliefs embodied by the symbol "YZY" and<br>
-                the associated artwork and are not intended to<br>
-                be or to be the subject of an investment<br>
-                opportunity investment contract or security of<br>
-                any type
+                This fund is intended for qualified investors<br>
+                only and involves substantial risk including<br>
+                potential total loss of capital
             </div>
             
             <div class="disclaimer-item">
-                YZY is not available to persons or entities in<br>
-                restricted jurisdictions
+                Blockchain assets are highly volatile and<br>
+                speculative investments
             </div>
             
             <div class="disclaimer-item">
-                Users acknowledge that digital assets involve<br>
-                inherent risks and potential for complete loss
+                Past performance does not guarantee future<br>
+                results and all investments carry risk
             </div>
             
             <div class="disclaimer-item">
-                Nothing on this site constitutes financial<br>
-                legal or investment advice
+                This is not an offer to sell securities<br>
+                and is for informational purposes only
             </div>
             
             <div class="disclaimer-item">
-                See terms and conditions here
+                See full offering memorandum and fund<br>
+                documents for complete terms
             </div>
         </div>
 
-        <!-- Social Links -->
-        <div class="social-links">
-            <a href="#" class="social-link">𝕏</a>
-            <a href="#" class="social-link">◄</a>
-            <a href="#" class="social-link">𝕏</a>
-            <a href="#" class="social-link">⬛</a>
-            <a href="#" class="social-link">♪</a>
-        </div>
     </div>
 
     <script>
