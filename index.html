@@ -12,146 +12,359 @@
         }
 
         body {
-            background: #FFFFFF;
+            background: #F8F8F8;
             color: #000000;
-            font-family: 'Arial', 'Helvetica Neue', sans-serif;
-            line-height: 1.2;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
             overflow-x: hidden;
+            padding: 40px 20px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        header {
-            padding: 60px 0;
-            border-bottom: 1px solid #000000;
+            text-align: center;
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: 3px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #999999;
+            margin: 0 auto 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 20px solid #FFFFFF;
+            transform: rotate(180deg);
+        }
+
+        .action-buttons {
+            margin-bottom: 80px;
+        }
+
+        .action-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: normal;
+            color: #000000;
+            margin: 8px 0;
+            cursor: pointer;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.3s ease;
         }
 
-        .hero {
-            padding: 120px 0;
-            text-align: center;
+        .action-btn:hover {
+            opacity: 0.5;
         }
 
-        .hero h1 {
-            font-size: clamp(48px, 8vw, 120px);
-            font-weight: 900;
-            letter-spacing: -2px;
-            line-height: 0.9;
+        .section {
+            margin: 60px 0;
+            text-align: left;
+        }
+
+        .section-text {
+            font-size: 12px;
+            line-height: 1.8;
             margin-bottom: 40px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .hero .subtitle {
-            font-size: 18px;
-            font-weight: 700;
-            max-width: 800px;
-            margin: 0 auto 60px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .contract-section {
-            background: #000000;
-            color: #FFFFFF;
-            padding: 40px 0;
-            text-align: center;
-            margin: 80px 0;
-        }
-
-        .contract-address {
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .address-code {
-            font-family: 'Courier New', monospace;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            word-break: break-all;
-            padding: 20px;
-            background: rgba(255,255,255,0.1);
-            margin: 20px 0;
-        }
-
-        .trade-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+        .currency-info {
             margin: 40px 0;
         }
 
-        .trade-btn {
-            background: #FFFFFF;
+        .contract-section {
+            margin: 40px 0;
+        }
+
+        .contract-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .contract-address {
+            font-size: 10px;
+            color: #666666;
+            word-break: break-all;
+            margin-bottom: 30px;
+        }
+
+        .trade-section {
+            margin: 40px 0;
+        }
+
+        .trade-link {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 15px 0;
             color: #000000;
-            border: 2px solid #000000;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-decoration: none;
             cursor: pointer;
-            transition: all 0.3s ease;
         }
 
-        .trade-btn:hover {
-            background: #000000;
-            color: #FFFFFF;
+        .trade-link:hover {
+            opacity: 0.5;
         }
 
-        .products-section {
-            padding: 100px 0;
-            border-top: 1px solid #000000;
+        .tokenomics-section {
+            margin: 60px 0;
+            text-align: left;
         }
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 60px;
-            margin-top: 60px;
-        }
-
-        .product-card {
-            text-align: center;
-            padding: 40px 20px;
-            border: 1px solid #000000;
-        }
-
-        .product-card h3 {
-            font-size: 24px;
-            font-weight: 900;
+        .tokenomics-title {
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-        .tokenomics {
-            padding: 100px 0;
-            border-top: 1px solid #000000;
-        }
-
-        .section-title {
-            font-size: 48px;
-            font-weight: 900;
+        .token-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 60px;
+        }
+
+        .token-detail {
+            font-size: 10px;
+            color: #666666;
+            margin-left: 20px;
+        }
+
+        .faq-section {
+            margin: 80px 0;
+            text-align: left;
+        }
+
+        .faq-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin: 15px 0;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .disclaimer-section {
+            margin: 80px 0;
+            font-size: 9px;
+            color: #666666;
+            line-height: 1.6;
             text-align: center;
         }
 
-        .tokenomics-grid {
-            display: grid;
-            grid-template-co
+        .disclaimer-item {
+            margin: 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .social-links {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            color: #000000;
+            font-size: 16px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-link:hover {
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo"></div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="action-btn">BUY</button>
+            <button class="action-btn">SELL</button>
+            <button class="action-btn">SEND</button>
+        </div>
+
+        <!-- Main Description -->
+        <div class="section">
+            <div class="section-text">
+                YZY MONEY IS A CONCEPT TO PUT YOU IN<br>
+                CONTROL, FREE FROM CENTRALIZED<br>
+                AUTHORITY
+            </div>
+        </div>
+
+        <!-- Currency Info -->
+        <div class="currency-info">
+            <div class="section-text">
+                YZY &nbsp;&nbsp; YE PAY &nbsp;&nbsp; YZY CARD
+            </div>
+            <div class="section-text">
+                YZY IS THE CURRENCY THAT POWERS ALL<br>
+                TRANSACTIONS WITHIN YZY MONEY
+            </div>
+        </div>
+
+        <!-- Contract Address -->
+        <div class="contract-section">
+            <div class="contract-label">CONTRACT ADDRESS</div>
+            <div class="contract-address">
+                DrZ26cKJDksVRWib3DVVsjo9eeXccc7hKhDJviiYEEZY
+            </div>
+        </div>
+
+        <!-- Trade Links -->
+        <div class="trade-section">
+            <a href="#" class="trade-link">TRADE YZY NOW</a>
+            <a href="#" class="trade-link">TRADE ON MOBILE</a>
+        </div>
+
+        <!-- Tokenomics -->
+        <div class="tokenomics-section">
+            <div class="tokenomics-title">YZYNOMICS</div>
+            
+            <div class="token-item">
+                <span>PUBLIC</span>
+                <span>20%</span>
+            </div>
+            <div class="token-detail">SUPPLY</div>
+            
+            <div class="token-item">
+                <span>LIQUIDITY</span>
+                <span>10%</span>
+            </div>
+            <div class="token-detail">PUBLIC</div>
+            
+            <div class="token-item">
+                <span>YEEZY INVESTMENTS LLC</span>
+                <span>30%</span>
+            </div>
+            <div class="token-detail">3 MO. CLIFF, 24 MO. VEST</div>
+            
+            <div class="token-item">
+                <span>TEAM</span>
+                <span>20%</span>
+            </div>
+            <div class="token-detail">6 MO. CLIFF, 24 MO. VEST</div>
+            
+            <div class="token-item">
+                <span>DEVELOPMENT</span>
+                <span>20%</span>
+            </div>
+            <div class="token-detail">12 MO. CLIFF, 24 MO. VEST</div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
+            
+            <div class="faq-item">WHAT IS YZY MONEY</div>
+            <div class="faq-item">WHAT IS YE PAY</div>
+            <div class="faq-item">WHAT IS YZY CARD</div>
+            <div class="faq-item">WHAT IS THE CONTRACT ADDRESS AND<br>SYMBOL FOR YZY</div>
+            <div class="faq-item">HOW CAN I TRADE YZY</div>
+            <div class="faq-item">HOW TO TRADE YZY ON MOBILE</div>
+            <div class="faq-item">HOW DO I BUY YZY WITH CARD</div>
+            <div class="faq-item">HOW DOES OUR ANTI-SNIPING SYSTEM<br>WORK</div>
+            <div class="faq-item">WHAT BLOCKCHAIN ARE YZY MINTED ON</div>
+            <div class="faq-item">HOW IS YZY VESTED</div>
+            <div class="faq-item">ARE YZY, YE PAY, AND YZY CARD<br>AFFILIATED</div>
+            <div class="faq-item">WHAT ELSE SHOULD I KNOW</div>
+        </div>
+
+        <!-- Disclaimers -->
+        <div class="disclaimer-section">
+            <div class="disclaimer-item">
+                YZY are intended to function as an expression<br>
+                of support for and engagement with the ideals<br>
+                and beliefs embodied by the symbol "YZY" and<br>
+                the associated artwork and are not intended to<br>
+                be or to be the subject of an investment<br>
+                opportunity investment contract or security of<br>
+                any type
+            </div>
+            
+            <div class="disclaimer-item">
+                YZY is not available to persons or entities in<br>
+                restricted jurisdictions
+            </div>
+            
+            <div class="disclaimer-item">
+                Users acknowledge that digital assets involve<br>
+                inherent risks and potential for complete loss
+            </div>
+            
+            <div class="disclaimer-item">
+                Nothing on this site constitutes financial<br>
+                legal or investment advice
+            </div>
+            
+            <div class="disclaimer-item">
+                See terms and conditions here
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">◄</a>
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">⬛</a>
+            <a href="#" class="social-link">♪</a>
+        </div>
+    </div>
+
+    <script>
+        // Simple click effects
+        document.querySelectorAll('.action-btn, .trade-link').forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.opacity = '0.3';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
