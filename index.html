@@ -24,15 +24,15 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            text-align: left;
-            padding-left: 20px;
+            text-align: center;
+            padding: 0 20px;
         }
 
         .logo {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            margin: 0 0 60px 0;
+            margin: 0 auto 60px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -48,7 +48,7 @@
 
         .action-buttons {
             margin-bottom: 80px;
-            text-align: left;
+            text-align: center;
         }
 
         .action-btn {
@@ -72,7 +72,7 @@
 
         .section {
             margin: 60px 0;
-            text-align: left;
+            text-align: center;
         }
 
         .section-text {
@@ -126,7 +126,7 @@
 
         .tokenomics-section {
             margin: 60px 0;
-            text-align: left;
+            text-align: center;
         }
 
         .tokenomics-title {
@@ -295,7 +295,7 @@
 
         <!-- Mint Section -->
         <div class="faq-section">
-            <a href="https://launchmynft.io/sol/19486" target="_blank" class="trade-link" style="font-size: 14px; display: block; margin: 40px 0;">MINT YZYVERSE</a>
+            <a href="https://launchmynft.io/sol/19486" target="_blank" class="trade-link" style="font-size: 14px; text-align: center; display: block; margin: 40px 0;">MINT YZYVERSE</a>
         </div>
 
         <!-- Disclaimers -->
@@ -332,23 +332,27 @@
     <script>
         // Simple click effects
         document.querySelectorAll('.action-btn').forEach(element => {
-            element.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.style.opacity = '0.3';
-                setTimeout(() => {
-                    this.style.opacity = '1';
-                }, 150);
-            });
+            // Only add click effects to buttons, not links
+            if (element.tagName === 'BUTTON') {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.style.opacity = '0.3';
+                    setTimeout(() => {
+                        this.style.opacity = '1';
+                    }, 150);
+                });
+            }
         });
 
-        // Handle trade links without preventing default
+        // Handle other trade links without preventing default (excluding MINT YZYVERSE)
         document.querySelectorAll('.trade-link').forEach(element => {
+            // Don't interfere with the MINT YZYVERSE link navigation
             element.addEventListener('click', function() {
                 // Only add visual effect, don't prevent default navigation
                 this.style.opacity = '0.3';
                 setTimeout(() => {
                     this.style.opacity = '1';
-                }, 150);
+                }, 100);
             });
         });
     </script>
